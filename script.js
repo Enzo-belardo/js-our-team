@@ -42,7 +42,7 @@ const lista = document.querySelector('ul');
 for( let key in team){
     const newElement = document.createElement('li');
 
-    newElement.innerHTML += team
+    newElement.innerHTML += `${team.nome }  ${team.ruolo}  ${team.foto}`;
 
     lista.append(newElement);
 
