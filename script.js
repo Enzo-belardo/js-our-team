@@ -37,6 +37,16 @@ const team =[
    },
 ]
 
+const lista = document.querySelector('ul');
+
 for( let key in team){
+    const newElement = document.createElement('li');
+
+    newElement.innerHTML += team
+
+    lista.append(newElement);
+
     console.log(team[key]);
+    
 }
+
