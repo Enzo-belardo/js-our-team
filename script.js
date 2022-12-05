@@ -37,3 +37,6 @@ const team =[
    },
 ]
 
+for( let key in team){
+    console.log(team[key]);
+}
