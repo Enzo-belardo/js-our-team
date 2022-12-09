@@ -21,7 +21,7 @@ const team =[
    {
     nome : 'Angela lopez',
     ruolo : 'Social media' ,
-    foto : 'Manager  angela-lopez-social-media-manager.jpg',
+    foto : 'angela-lopez-social-media-manager.jpg',
    },
 
    {
@@ -32,21 +32,19 @@ const team =[
 
    {
     nome : 'Barbara Ramos',
-    ruolo : 'Graphic designer' ,
+    ruolo : 'Graphic designer',
     foto : 'barbara-ramos-graphic-designer.jpg',
    },
 ]
 
-const lista = document.querySelector('ul');
+const lista = document.querySelector('div.team');
 
-for( let key in team){
-    const newElement = document.createElement('li');
+for( let i = 0 ; i < team.length; i++){
+    const newElement= document.createElement('div');
 
-    newElement.innerHTML += `${team.nome }  ${team.ruolo}  ${team.foto}`;
-
+    newElement.innerHTML = `<p>${team[i].nome}</p>   <p>${team[i].ruolo}</p>   <img src="${team[i].foto}" alt=""> `;
+    newElement.classList.add ('member')
     lista.append(newElement);
-
-    console.log(team[key]);
     
 }
 
